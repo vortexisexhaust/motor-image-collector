@@ -21,7 +21,13 @@ from config import BRAND, MODELS
 
 class MainWindow(QWidget):
 
+def start_collect(self):
 
+    current_model = self.sender()
+
+    print(
+        "开始采集"
+    )
     def __init__(self):
 
         super().__init__()
@@ -123,7 +129,10 @@ class MainWindow(QWidget):
             "开始采集图片"
         )
 
-
+        start_button.clicked.connect(
+            self.start_collect
+        )
+        
         layout.addWidget(
             start_button
         )
