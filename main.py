@@ -1,38 +1,31 @@
 """
 Motor Image Collector
-主程序入口
-Version 1.0
+程序入口
 """
 
 import sys
 
-from PySide6.QtWidgets import QApplication, QLabel, QWidget
+from PySide6.QtWidgets import QApplication
+
+from app.gui import MainWindow
 
 
-class MainWindow(QWidget):
-    def __init__(self):
-        super().__init__()
 
-        self.setWindowTitle("Motor Image Collector")
+def main():
 
-        self.resize(600, 400)
-
-        label = QLabel(
-            "Motor Image Collector\n\n"
-            "CFMOTO 官方图片采集工具\n\n"
-            "Version 1.0",
-            self
-        )
-
-        label.move(120, 120)
-
-
-if __name__ == "__main__":
-
-    app = QApplication(sys.argv)
+    app = QApplication(
+        sys.argv
+    )
 
     window = MainWindow()
 
     window.show()
 
-    sys.exit(app.exec())
+    sys.exit(
+        app.exec()
+    )
+
+
+if __name__ == "__main__":
+
+    main()
