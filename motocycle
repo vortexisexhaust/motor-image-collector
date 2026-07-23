@@ -1,0 +1,11 @@
+# Motor Image Collector
+
+摩托车官方素材采集工具。
+
+目标：
+- CFMOTO 官方图片采集
+- 自动分类
+- 自动下载
+- 自动生成 EXE
+
+Version 1.0
